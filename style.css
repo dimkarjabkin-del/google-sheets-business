@@ -114,6 +114,7 @@ body {
 	transform: translateX(42px);
 }
 
+
 /* ===== PREMIUM TEXT EFFECT ===== */
 
 .toggle-option {
@@ -133,6 +134,7 @@ body {
 .lang-toggle.ru-active .toggle-option:last-child {
 	opacity: 0.6;
 	transform: scale(0.95);
+	font-weight: 700;
 }
 
 /* UA active */
