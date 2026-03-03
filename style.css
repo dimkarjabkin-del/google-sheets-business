@@ -61,58 +61,39 @@ body {
 	background: #444;
 }
 
-/* ===== IOS LANGUAGE TOGGLE ===== */
+/* ===== LANGUAGE TOGGLE ===== */
 
-.lang-toggle {
-	position: relative;
-	width: 90px;
-	height: 40px;
-	background: #ddd;
-	border-radius: 50px;
+.lang-switch {
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 5px;
-	font-size: 13px;
-	font-weight: 600;
+	background: #e5e5e5;
+	border-radius: 30px;
+	padding: 4px;
 }
 
-.toggle-option {
-	z-index: 2;
-	width: 50%;
-	text-align: center;
+.lang-btn {
+	padding: 6px 14px;
+	border-radius: 20px;
 	text-decoration: none;
+	font-size: 13px;
+	font-weight: 600;
+	color: #444;
+	transition: all 0.3s ease;
+}
+
+/* Активный RU */
+.lang-btn.active:first-child {
+	background: #0088cc;
 	color: white;
 }
 
-.toggle-slider {
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	background: white;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-	transition: all 0.35s ease;
-}
-
-/* RU active */
-.lang-toggle.ru-active {
-	background: #0088cc;
-}
-
-.lang-toggle.ru-active .toggle-slider {
-	left: 5px;
-}
-
-/* UA active */
-.lang-toggle.ua-active {
+/* Активный UA */
+.lang-btn.active:last-child {
 	background: #28a745;
+	color: white;
 }
 
-.lang-toggle.ua-active .toggle-slider {
-	left: 45px;
+.lang-btn:not(.active):hover {
+	opacity: 0.7;
 }
 
 /* ===== СЕКЦИИ ===== */
