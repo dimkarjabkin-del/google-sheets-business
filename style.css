@@ -130,3 +130,8 @@ ul {
 	opacity: 1;
 	transform: translateY(0);
 }
+
+.section:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
