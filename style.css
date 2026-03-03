@@ -61,52 +61,51 @@ body {
 	background: #444;
 }
 
-/* ===== IOS LANGUAGE TOGGLE ===== */
+/* ===== COMPACT IOS LANGUAGE TOGGLE ===== */
 
 .lang-toggle {
 	position: relative;
-	width: 90px;
-	height: 40px;
-	background: #ddd;
-	border-radius: 50px;
+	width: 70px;
+	height: 28px;
+	border-radius: 30px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	padding: 5px;
-	font-size: 13px;
+	padding: 3px;
+	font-size: 11px;
 	font-weight: 600;
 }
 
 .toggle-option {
-	z-index: 2;
 	width: 50%;
 	text-align: center;
 	text-decoration: none;
+	z-index: 2;
 	color: white;
+	line-height: 22px;
 }
 
 .toggle-slider {
 	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 40px;
-	height: 40px;
+	top: 3px;
+	left: 3px;
+	width: 22px;
+	height: 22px;
 	border-radius: 50%;
 	background: white;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-	transition: all 0.35s ease;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease;
 }
 
-/* RU active */
+/* RU */
 .lang-toggle.ru-active {
 	background: #0088cc;
 }
 
 .lang-toggle.ru-active .toggle-slider {
-	left: 5px;
+	left: 3px;
 }
 
-/* UA active */
+/* UA */
 .lang-toggle.ua-active {
 	background: #28a745;
 }
