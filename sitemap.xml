@@ -2,19 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://incandescent-brigadeiros-2c61f7.netlify.app/</loc>
+    <loc>https://google-sheets-business.pages.dev/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://incandescent-brigadeiros-2c61f7.netlify.app/crm.html</loc>
+    <loc>https://google-sheets-business.pages.dev/crm.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://incandescent-brigadeiros-2c61f7.netlify.app/finance.html</loc>
+    <loc>https://google-sheets-business.pages.dev/finance.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://incandescent-brigadeiros-2c61f7.netlify.app/automation.html</loc>
+    <loc>https://google-sheets-business.pages.dev/automation.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
