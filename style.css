@@ -190,7 +190,7 @@ ul {
 
 .contacts-wrapper {
 	padding: 80px 20px;
-	margin-left: 70px;
+	
 }
 
 .contacts-row {
@@ -199,6 +199,7 @@ ul {
 	align-items: center;
 	gap: 80px;
 	flex-wrap: wrap;
+	padding-left: 40px;   /* ← вот это */
 }
 
 .contact-link {
