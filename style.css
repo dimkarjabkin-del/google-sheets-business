@@ -136,7 +136,7 @@ ul {
 	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== TELEGRAM FLOAT BUTTON ===== */
+/* ===== ПУЛЬС С ВОЛНОЙ ===== */
 
 .telegram-float {
 	position: fixed;
@@ -150,9 +150,8 @@ ul {
 	align-items: center;
 	justify-content: center;
 	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-	transition: transform 0.2s ease;
 	z-index: 1000;
-	animation: subtleShake 3s infinite;
+	animation: pulse 3.5s infinite;
 }
 
 .telegram-float img {
@@ -160,30 +159,29 @@ ul {
 	height: 36px;
 }
 
-/* Hover эффект */
 .telegram-float:hover {
-	transform: scale(1.08);
+	transform: scale(1.12);
 }
 
-/* Лёгкая микро-вибрация */
-@keyframes subtleShake {
+/* Основная пульсация */
+@keyframes pulse {
 	0% {
-		transform: rotate(0deg);
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.5);
 	}
 
-	2% {
-		transform: rotate(-3deg);
+	30% {
+		transform: scale(1.12);
+		box-shadow: 0 0 0 15px rgba(0, 136, 204, 0);
 	}
 
-	4% {
-		transform: rotate(3deg);
-	}
-
-	6% {
-		transform: rotate(0deg);
+	60% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(0, 136, 204, 0);
 	}
 
 	100% {
-		transform: rotate(0deg);
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(0, 136, 204, 0);
 	}
 }
