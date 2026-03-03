@@ -112,8 +112,25 @@
 		<a href="https://t.me/SheetStudioUA" target="_blank" class="button">
 			Отримати консультацію в Telegram
 		</a>
-		
+
 	</div>
+
+
+	<script>
+		const sections = document.querySelectorAll('.section');
+
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+				}
+			});
+		}, { threshold: 0.15 });
+
+		sections.forEach(section => {
+			observer.observe(section);
+		});
+	</script>
 
 </body>
 
