@@ -13,7 +13,7 @@ body {
 	padding: 40px 20px;
 }
 
-/* ===== НОВАЯ НАВИГАЦИЯ ===== */
+/* ===== НАВИГАЦИЯ ===== */
 
 .navbar {
 	display: flex;
@@ -47,21 +47,7 @@ body {
 	transform: translateY(-2px);
 }
 
-.lang-switch a {
-	text-decoration: none;
-	padding: 8px 16px;
-	border-radius: 20px;
-	background: #222;
-	color: white;
-	font-size: 14px;
-	transition: all 0.25s ease;
-}
-
-.lang-switch a:hover {
-	background: #444;
-}
-
-/* ===== PERFECT COMPACT IOS TOGGLE ===== */
+/* ===== IOS LANGUAGE TOGGLE ===== */
 
 .lang-toggle {
 	position: relative;
@@ -84,8 +70,8 @@ body {
 	line-height: 30px;
 	transition:
 		transform 0.3s ease,
-		text-shadow 0.3s ease,
-		font-weight 0.3s ease;
+		font-weight 0.3s ease,
+		text-shadow 0.3s ease;
 }
 
 .toggle-slider {
@@ -100,7 +86,7 @@ body {
 	transition: transform 0.3s ease;
 }
 
-/* ===== RU active ===== */
+/* ===== RU ACTIVE ===== */
 
 .lang-toggle.ru-active {
 	background: #0088cc;
@@ -110,19 +96,19 @@ body {
 	transform: translateX(0);
 }
 
-/* RU (скрыт под кружком) */
-.lang-toggle.ru-active .toggle-option:first-child {
+/* RU активный */
+.lang-toggle.ru-active .lang-ru {
 	transform: scale(1.05);
 	text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 
-/* UA — доступный язык (делаем жирнее и нормального размера) */
-.lang-toggle.ru-active .toggle-option:last-child {
+/* UA доступный язык (полный контроль) */
+.lang-toggle.ru-active .lang-ua {
 	font-weight: 700;
-	transform: scale(1);
+	/* ← меняешь тут жирность UA */
 }
 
-/* ===== UA active ===== */
+/* ===== UA ACTIVE ===== */
 
 .lang-toggle.ua-active {
 	background: #28a745;
@@ -132,14 +118,19 @@ body {
 	transform: translateX(42px);
 }
 
-/* UA активен */
-.lang-toggle.ua-active .toggle-option:last-child {
+/* UA активный */
+.lang-toggle.ua-active .lang-ua {
 	transform: scale(1.05);
 	text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 
+/* RU доступный язык */
+.lang-toggle.ua-active .lang-ru {
+	font-weight: 400;
+	/* ← меняешь тут жирность RU */
+}
 
-/* ===== MINI TEXT LINKS RESPONSIVE ===== */
+/* ===== MINI TEXT LINKS ===== */
 
 .text-link {
 	display: inline-block;
@@ -204,7 +195,7 @@ ul {
 	padding-left: 20px;
 }
 
-/* ===== ПУЛЬС TELEGRAM ===== */
+/* ===== TELEGRAM FLOAT ===== */
 
 .telegram-float {
 	position: fixed;
@@ -317,5 +308,4 @@ ul {
 	h1 {
 		font-size: 26px;
 	}
-
 }
