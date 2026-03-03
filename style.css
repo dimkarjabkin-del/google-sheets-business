@@ -97,8 +97,16 @@ body {
 }
 
 /* RU active */
-.lang-toggle.ru-active {
-	background: #0088cc;
+.lang-toggle.ru-active .toggle-option:first-child {
+    opacity: 1;
+    transform: scale(1.05);
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+.lang-toggle.ru-active .toggle-option:last-child {
+    opacity: 0.6;
+    transform: scale(0.95);
+    font-weight: 700; /* ← ВСТАВЛЯЕМ СЮДА */
 }
 
 .lang-toggle.ru-active .toggle-slider {
@@ -112,10 +120,6 @@ body {
 
 .lang-toggle.ua-active .toggle-slider {
 	transform: translateX(42px);
-}
-
-.lang-toggle.ru-active .toggle-option:last-child {
-	font-weight: 700;
 }
 
 
