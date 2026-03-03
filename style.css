@@ -185,3 +185,36 @@ ul {
 		box-shadow: 0 0 0 0 rgba(0, 136, 204, 0);
 	}
 }
+
+/* ===== CONTACTS PAGE ===== */
+
+.contacts-wrapper {
+	text-align: center;
+	padding: 60px 20px;
+}
+
+.contact-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	margin: 25px 0;
+	font-size: 20px;
+}
+
+.contact-item img {
+	width: 42px;
+	height: 42px;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-item a img:hover {
+	transform: scale(1.15);
+	opacity: 0.85;
+	cursor: pointer;
+}
+
+.phone-number {
+	font-weight: 600;
+	font-size: 20px;
+}
