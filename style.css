@@ -186,7 +186,7 @@ ul {
 	}
 }
 
-/* ===== CONTACTS PAGE ===== */
+/* ===== CONTACTS PAGE FIXED ALIGNMENT ===== */
 
 .contacts-wrapper {
 	text-align: center;
@@ -197,7 +197,7 @@ ul {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 60px;
+	gap: 50px;
 	margin-top: 40px;
 	flex-wrap: wrap;
 }
@@ -205,7 +205,7 @@ ul {
 .contact-link {
 	display: flex;
 	align-items: center;
-	gap: 15px;
+	gap: 12px;
 	text-decoration: none;
 	color: #222;
 	font-size: 20px;
@@ -213,16 +213,17 @@ ul {
 }
 
 .contact-link img {
-	width: 44px;
-	height: 44px;
-	transition: transform 0.25s ease;
+	width: 48px;
+	height: 48px;
+	display: block;
 }
 
 .contact-link:hover {
-	transform: translateY(-4px) scale(1.08);
+	transform: translateY(-5px) scale(1.08);
 	opacity: 0.85;
 }
 
 .phone-number {
 	font-weight: 600;
+	white-space: nowrap;
 }
