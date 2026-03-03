@@ -61,57 +61,57 @@ body {
 	background: #444;
 }
 
-/* ===== COMPACT IOS LANGUAGE TOGGLE ===== */
+/* ===== PERFECT COMPACT IOS TOGGLE ===== */
 
 .lang-toggle {
 	position: relative;
-	width: 70px;
-	height: 28px;
+	width: 72px;
+	height: 30px;
 	border-radius: 30px;
 	display: flex;
 	align-items: center;
-	padding: 3px;
 	font-size: 11px;
 	font-weight: 600;
+	overflow: hidden;
 }
 
 .toggle-option {
-	width: 50%;
+	flex: 1;
 	text-align: center;
 	text-decoration: none;
 	z-index: 2;
 	color: white;
-	line-height: 22px;
+	line-height: 30px;
 }
 
 .toggle-slider {
 	position: absolute;
 	top: 3px;
 	left: 3px;
-	width: 22px;
-	height: 22px;
+	width: 24px;
+	height: 24px;
 	border-radius: 50%;
 	background: white;
-	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-	transition: all 0.3s ease;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+	transition: transform 0.3s ease;
 }
 
-/* RU */
+/* RU active */
 .lang-toggle.ru-active {
 	background: #0088cc;
 }
 
 .lang-toggle.ru-active .toggle-slider {
-	left: 3px;
+	transform: translateX(0);
 }
 
-/* UA */
+/* UA active */
 .lang-toggle.ua-active {
 	background: #28a745;
 }
 
 .lang-toggle.ua-active .toggle-slider {
-	left: 45px;
+	transform: translateX(42px);
 }
 
 /* ===== СЕКЦИИ ===== */
