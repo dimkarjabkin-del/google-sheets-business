@@ -199,7 +199,7 @@ ul {
 	align-items: center;
 	gap: 80px;
 	flex-wrap: wrap;
-	padding-left: 40px;   /* ← вот это */
+	padding-left: 80px;   /* ← вот это */
 }
 
 .contact-link {
