@@ -114,6 +114,11 @@ body {
 	transform: translateX(42px);
 }
 
+.lang-toggle.ru-active .toggle-option:last-child {
+	font-weight: 700;
+}
+
+
 
 /* ===== PREMIUM TEXT EFFECT ===== */
 
@@ -134,7 +139,6 @@ body {
 .lang-toggle.ru-active .toggle-option:last-child {
 	opacity: 0.6;
 	transform: scale(0.95);
-	font-weight: 700;
 }
 
 /* UA active */
