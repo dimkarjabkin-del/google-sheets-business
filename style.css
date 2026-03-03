@@ -189,40 +189,32 @@ ul {
 /* ===== CONTACTS PAGE ===== */
 
 .contacts-wrapper {
-	text-align: center;
-	padding: 60px 20px;
+    text-align: center;
+    padding: 60px 20px;
 }
 
-.contacts-row {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 60px;
-	margin-top: 40px;
-	flex-wrap: wrap;
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+    font-size: 20px;
 }
 
-.contact-link {
-	display: flex;
-	align-items: center;
-	gap: 15px;
-	text-decoration: none;
-	color: #222;
-	font-size: 20px;
-	transition: transform 0.25s ease, opacity 0.25s ease;
+.contact-item img {
+    width: 42px;
+    height: 42px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.contact-link img {
-	width: 44px;
-	height: 44px;
-	transition: transform 0.25s ease;
-}
-
-.contact-link:hover {
-	transform: translateY(-4px) scale(1.08);
-	opacity: 0.85;
+.contact-item a img:hover {
+    transform: scale(1.15);
+    opacity: 0.85;
+    cursor: pointer;
 }
 
 .phone-number {
-	font-weight: 600;
+    font-weight: 600;
+    font-size: 20px;
 }
