@@ -50,7 +50,7 @@
 			<a href="/ua/automation.html" style="margin:0 10px;">Автоматизація</a>
 			<a href="/ua/custom-development.html" style="margin:0 10px;">На замовлення</a>
 			<a href="/ua/contacts.html" style="margin:0 10px;">Контакти</a>
-			<a href="/" style="margin:0 10px;" class="lang">RU</a>
+			<a href="/" style="margin:0 10px;">RU</a>
 		</nav>
 
 		<div class="section">
@@ -129,28 +129,13 @@
 			</p>
 		</div>
 
-		<a href="https://t.me/SheetStudioUA" target="_blank" class="button">
-			Отримати консультацію в Telegram
-		</a>
-
 	</div>
 
+	<a href="https://t.me/SheetStudioUA" target="_blank" class="telegram-float">
+		<img src="/telegram.png" alt="Telegram">
+	</a>
 
-	<script>
-		const sections = document.querySelectorAll('.section');
-
-		const observer = new IntersectionObserver(entries => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					entry.target.classList.add('visible');
-				}
-			});
-		}, { threshold: 0.15 });
-
-		sections.forEach(section => {
-			observer.observe(section);
-		});
-	</script>
+	<script src="/main.js"></script>
 
 </body>
 
