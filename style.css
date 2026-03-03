@@ -82,6 +82,11 @@ body {
 	z-index: 2;
 	color: white;
 	line-height: 30px;
+	transition:
+		transform 0.3s ease,
+		opacity 0.3s ease,
+		text-shadow 0.3s ease,
+		font-weight 0.3s ease;
 }
 
 .toggle-slider {
@@ -96,30 +101,38 @@ body {
 	transition: transform 0.3s ease;
 }
 
-/* RU active */
-.lang-toggle.ru-active .toggle-option:first-child {
-    opacity: 1;
-    transform: scale(1.05);
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
-}
+/* ===== RU active ===== */
 
-.lang-toggle.ru-active .toggle-option:last-child {
-    opacity: 0.6;
-    transform: scale(0.95);
-    font-weight: 700; /* ← ВСТАВЛЯЕМ СЮДА */
+.lang-toggle.ru-active {
+	background: #0088cc;
 }
 
 .lang-toggle.ru-active .toggle-slider {
 	transform: translateX(0);
 }
 
-/* UA active */
+.lang-toggle.ru-active .toggle-option:first-child {
+	transform: scale(1.05);
+	text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+.lang-toggle.ru-active .toggle-option:last-child {
+	font-weight: 700;
+}
+
+/* ===== UA active ===== */
+
 .lang-toggle.ua-active {
 	background: #28a745;
 }
 
 .lang-toggle.ua-active .toggle-slider {
 	transform: translateX(42px);
+}
+
+.lang-toggle.ua-active .toggle-option:last-child {
+	transform: scale(1.05);
+	text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 
 
