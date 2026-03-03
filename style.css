@@ -84,7 +84,6 @@ body {
 	line-height: 30px;
 	transition:
 		transform 0.3s ease,
-		opacity 0.3s ease,
 		text-shadow 0.3s ease,
 		font-weight 0.3s ease;
 }
@@ -111,13 +110,16 @@ body {
 	transform: translateX(0);
 }
 
+/* RU (скрыт под кружком) */
 .lang-toggle.ru-active .toggle-option:first-child {
 	transform: scale(1.05);
 	text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 
+/* UA — доступный язык (делаем жирнее и нормального размера) */
 .lang-toggle.ru-active .toggle-option:last-child {
 	font-weight: 700;
+	transform: scale(1);
 }
 
 /* ===== UA active ===== */
@@ -130,50 +132,12 @@ body {
 	transform: translateX(42px);
 }
 
+/* UA активен */
 .lang-toggle.ua-active .toggle-option:last-child {
 	transform: scale(1.05);
 	text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 
-
-
-/* ===== PREMIUM TEXT EFFECT ===== */
-
-.toggle-option {
-	transition:
-		transform 0.3s ease,
-		opacity 0.3s ease,
-		text-shadow 0.3s ease;
-}
-
-/* RU active */
-.lang-toggle.ru-active .toggle-option:first-child {
-	opacity: 1;
-	transform: scale(1.05);
-	text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
-}
-
-.lang-toggle.ru-active .toggle-option:last-child {
-	opacity: 0.6;
-	transform: scale(0.95);
-}
-
-/* UA active */
-.lang-toggle.ua-active .toggle-option:first-child {
-	opacity: 0.6;
-	transform: scale(0.95);
-}
-
-.lang-toggle.ua-active .toggle-option:last-child {
-	opacity: 1;
-	transform: scale(1.05);
-	text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
-}
-
-/* UA жирнее, когда активен RU */
-.lang-toggle.ru-active .toggle-option:last-child {
-	font-weight: 800;
-}
 
 /* ===== MINI TEXT LINKS RESPONSIVE ===== */
 
