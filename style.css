@@ -170,6 +170,11 @@ body {
 	text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 
+/* UA жирнее, когда активен RU */
+.lang-toggle.ru-active .toggle-option:last-child {
+	font-weight: 700;
+}
+
 /* ===== MINI TEXT LINKS RESPONSIVE ===== */
 
 .text-link {
