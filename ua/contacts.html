@@ -4,31 +4,47 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>Контакти | SheetStudioUA</title>
+
 	<meta name="description"
 		content="Зв'язок з розробником Google Таблиць для бізнесу в Україні. Телефон, Telegram, Viber.">
-	<meta name="geo.region" content="UA">
 
 	<link rel="alternate" hreflang="ru" href="https://google-sheets-business.pages.dev/contacts.html" />
 	<link rel="alternate" hreflang="uk" href="https://google-sheets-business.pages.dev/ua/contacts.html" />
 	<link rel="alternate" hreflang="x-default" href="https://google-sheets-business.pages.dev/contacts.html" />
 
 	<link rel="stylesheet" href="/style.css">
+
 </head>
 
 <body>
 
-	<div class="container">
+	<nav class="navbar">
 
-		<nav style="margin-bottom:40px;">
-			<a href="/ua/" style="margin:0 10px;">Головна</a>
-			<a href="/ua/crm.html" style="margin:0 10px;">CRM</a>
-			<a href="/ua/finance.html" style="margin:0 10px;">Фінансовий облік</a>
-			<a href="/ua/automation.html" style="margin:0 10px;">Автоматизація</a>
-			<a href="/ua/custom-development.html" style="margin:0 10px;">На замовлення</a>
-			<a href="/ua/contacts.html" style="margin:0 10px;">Контакти</a>
-			<a href="/contacts.html" style="margin:0 10px;">RU</a>
-		</nav>
+		<div class="navbar-inner">
+
+			<div class="nav-links">
+				<a href="/ua/">Головна</a>
+				<a href="/ua/crm.html">CRM</a>
+				<a href="/ua/finance.html">Фінансовий облік</a>
+				<a href="/ua/automation.html">Автоматизація</a>
+				<a href="/ua/custom-development.html">На замовлення</a>
+				<a href="/ua/contacts.html" class="active">Контакти</a>
+			</div>
+
+			<div class="lang-toggle ua-active">
+				<a href="/contacts.html" class="toggle-option lang-ru">RU</a>
+				<a href="/ua/contacts.html" class="toggle-option lang-ua">UA</a>
+				<div class="toggle-slider"></div>
+			</div>
+
+		</div>
+
+	</nav>
+
+
+	<div class="container">
 
 		<div class="section contacts-wrapper">
 
@@ -52,6 +68,11 @@
 		</div>
 
 	</div>
+
+
+	<a href="https://t.me/SheetStudioUA" target="_blank" class="telegram-float">
+		<img src="/telegram.png" alt="Telegram">
+	</a>
 
 	<script src="/main.js"></script>
 
