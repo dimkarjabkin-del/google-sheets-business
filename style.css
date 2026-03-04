@@ -266,14 +266,12 @@ ul {
 /* ===== TELEGRAM FLOAT SMART POSITION ===== */
 
 .telegram-float {
-	position: fixed;
-	bottom: 30px;
 
-	/* Привязка к контейнеру */
-	right: calc((100vw - 900px) / 2 - 70px);
+	position: absolute;
 
 	width: 58px;
 	height: 58px;
+
 	border-radius: 50%;
 	background: white;
 
@@ -285,7 +283,17 @@ ul {
 	z-index: 1000;
 
 	animation: pulse 2.7s infinite;
-	transition: transform 0.25s ease;
+	transition: transform 0.25s ease, top 0.2s ease;
+
+	right: calc((100vw - 900px) / 2 - 70px);
+}
+
+@media (max-width:1100px) {
+
+	.telegram-float {
+		right: 15px;
+	}
+
 }
 
 .telegram-float img {

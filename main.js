@@ -70,3 +70,41 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 });
+
+/* ===== TELEGRAM FOLLOW SECTIONS ===== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+	const tg = document.querySelector(".telegram-float");
+	const sections = document.querySelectorAll(".section");
+
+	if (!tg || sections.length === 0) return;
+
+	function updatePosition() {
+
+		let activeSection = sections[0];
+
+		sections.forEach(section => {
+
+			const rect = section.getBoundingClientRect();
+
+			if (rect.top <= window.innerHeight * 0.5) {
+				activeSection = section;
+			}
+
+		});
+
+		const rect = activeSection.getBoundingClientRect();
+
+		const scrollTop = window.scrollY;
+
+		tg.style.top =
+			scrollTop + rect.bottom - 80 + "px";
+
+	}
+
+	window.addEventListener("scroll", updatePosition);
+
+	updatePosition();
+
+});
