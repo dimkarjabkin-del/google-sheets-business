@@ -16,12 +16,23 @@ body {
 /* ===== НАВИГАЦИЯ ===== */
 
 .navbar {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	padding: 20px 0;
 	gap: 15px;
+
+	padding: 15px 20px;
+
+	background: white;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+
+	backdrop-filter: blur(6px);
 }
 
 .nav-links {
@@ -43,7 +54,7 @@ body {
 
 /* Hover */
 .nav-links a:hover {
-	background: #0088cc;
+	background: #66b2d8;
 	color: white;
 	transform: translateY(-2px);
 }
