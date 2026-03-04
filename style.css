@@ -15,6 +15,7 @@ body {
 }
 
 /* ===== НАВИГАЦИЯ ===== */
+/* ===== FULL WIDTH TOP PANEL ===== */
 
 .navbar {
 	position: sticky;
@@ -22,27 +23,30 @@ body {
 	z-index: 1000;
 
 	width: 100%;
-	background: #3b3b3b;; /* чуть темнее контента */
+	background: #e9eef5;
 	border-bottom: 1px solid rgba(0,0,0,0.06);
 	box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
 
-/* Внутренний ограничитель ширины */
 .navbar-inner {
-	max-width: 900px;  /* совпадает с .container */
+	max-width: 900px;
 	margin: 0 auto;
 	padding: 14px 20px;
 
 	display: flex;
 	align-items: center;
-	gap: 20px;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 15px;
 }
 
-/* Кнопки по центру */
+/* ===== NAV LINKS ===== */
+
 .nav-links {
 	display: flex;
 	gap: 12px;
-	margin: 0 auto; /* центрирует навигацию */
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .nav-links a {
@@ -54,40 +58,40 @@ body {
 	font-weight: 500;
 	font-size: 14px;
 	transition: all 0.25s ease;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .nav-links a:hover {
-	background: #3db5f1;
+	background: #0088cc;
 	color: white;
 	transform: translateY(-2px);
 }
 
-/* Active */
 .nav-links a.active {
 	background: #0088cc;
 	color: white;
 	transform: translateY(-3px);
-	box-shadow: 0 8px 22px rgba(0, 136, 204, 0.35);
+	box-shadow: 0 8px 22px rgba(0,136,204,0.35);
 	font-weight: 600;
 }
 
-/* Переключатель языка чуть правее */
-.lang-toggle {
-	margin-left: 20px;
-}
 
-/* ===== IOS LANGUAGE TOGGLE ===== */
+/* ===== LANGUAGE TOGGLE ===== */
 
 .lang-toggle {
+	margin-left: 10px;
+
 	position: relative;
 	width: 72px;
 	height: 30px;
 	border-radius: 30px;
+
 	display: flex;
 	align-items: center;
+
 	font-size: 11px;
 	font-weight: 600;
+
 	overflow: hidden;
 }
 
@@ -98,12 +102,13 @@ body {
 	z-index: 2;
 	color: white;
 	line-height: 30px;
+
 	transition:
-		transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-		font-size 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-		opacity 0.25s ease,
-		text-shadow 0.35s ease,
-		font-weight 0.3s ease;
+	transform 0.35s cubic-bezier(0.22,1,0.36,1),
+	font-size 0.35s cubic-bezier(0.22,1,0.36,1),
+	opacity 0.25s ease,
+	text-shadow 0.35s ease,
+	font-weight 0.3s ease;
 }
 
 .toggle-slider {
@@ -114,9 +119,11 @@ body {
 	height: 24px;
 	border-radius: 50%;
 	background: white;
-	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
-	transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+	box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+
+	transition: transform 0.38s cubic-bezier(0.22,1,0.36,1);
 }
+
 
 /* ===== RU ACTIVE ===== */
 
@@ -128,19 +135,17 @@ body {
 	transform: translateX(0);
 }
 
-/* RU активный */
 .lang-toggle.ru-active .lang-ru {
 	transform: scale(1.05);
-	text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+	text-shadow: 0 0 6px rgba(255,255,255,0.4);
 }
 
-/* UA доступный */
 .lang-toggle.ru-active .lang-ua {
 	font-weight: 600;
-	/* ← регулируешь тут */
 	font-size: 11px;
 	opacity: 1;
 }
+
 
 /* ===== UA ACTIVE ===== */
 
@@ -152,18 +157,35 @@ body {
 	transform: translateX(42px);
 }
 
-/* UA активный */
 .lang-toggle.ua-active .lang-ua {
 	transform: scale(1.05);
-	text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+	text-shadow: 0 0 6px rgba(255,255,255,0.4);
 }
 
-/* RU доступный */
 .lang-toggle.ua-active .lang-ru {
 	font-weight: 200;
-	/* ← регулируешь тут */
 	font-size: 10px;
 	opacity: 0.7;
+}
+
+
+/* ===== MOBILE FIX ===== */
+
+@media (max-width: 768px) {
+
+	.navbar-inner {
+		flex-direction: column;
+	}
+
+	.nav-links {
+		justify-content: center;
+	}
+
+	.lang-toggle {
+		margin-top: 6px;
+		margin-left: 0;
+	}
+
 }
 
 /* ===== PRESS EFFECT (без конфликтов transform) ===== */
