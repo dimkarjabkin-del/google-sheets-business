@@ -104,8 +104,13 @@ body {
 
 /* UA доступный язык (полный контроль) */
 .lang-toggle.ru-active .lang-ua {
-	font-weight: 700;
-	/* ← меняешь тут жирность UA */
+	/* жирнее */
+	font-weight: 600;
+	/* размер*/
+	font-size: 11px;
+	/* прозрачность */
+	opacity: 1;
+
 }
 
 /* ===== UA ACTIVE ===== */
@@ -126,8 +131,13 @@ body {
 
 /* RU доступный язык */
 .lang-toggle.ua-active .lang-ru {
-	font-weight: 400;
-	/* ← меняешь тут жирность RU */
+	/* жирнее */
+	font-weight: 200;
+	/* размер*/
+	font-size: 10px;
+	/* прозрачность */
+	opacity: 0.70;
+
 }
 
 /* ===== MINI TEXT LINKS ===== */
