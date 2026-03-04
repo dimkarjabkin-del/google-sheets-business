@@ -5,6 +5,16 @@ body {
 	font-family: 'Segoe UI', Arial, sans-serif;
 	background: linear-gradient(135deg, #f4f6f9, #e9eef5);
 	color: #222;
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+
+	* {
+		-webkit-overflow-scrolling: touch;
+	}
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 .container {
@@ -547,4 +557,50 @@ ul {
 		transform: translateY(0);
 		opacity: 1;
 	}
+}
+
+/* ===== SCROLL HINT ===== */
+
+.scroll-hint {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-top: -10px;
+	margin-bottom: 20px;
+
+}
+
+.scroll-arrow {
+
+	width: 24px;
+	height: 24px;
+
+	border-left: 3px solid #0088cc;
+	border-bottom: 3px solid #0088cc;
+
+	transform: rotate(-45deg);
+
+	animation: scrollArrow 1.6s infinite;
+
+}
+
+@keyframes scrollArrow {
+
+	0% {
+		transform: rotate(-45deg) translate(0, 0);
+		opacity: 0;
+	}
+
+	50% {
+		transform: rotate(-45deg) translate(-6px, 6px);
+		opacity: 1;
+	}
+
+	100% {
+		transform: rotate(-45deg) translate(-12px, 12px);
+		opacity: 0;
+	}
+
 }

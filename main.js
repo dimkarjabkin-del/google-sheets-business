@@ -108,3 +108,42 @@ document.addEventListener("DOMContentLoaded", function () {
 	updatePosition();
 
 });
+
+
+/* ===== AUTO SCROLL HINT ===== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+	const firstSection = document.querySelector(".section");
+
+	if (!firstSection) return;
+
+	const hint = document.createElement("div");
+	hint.className = "scroll-hint";
+
+	hint.innerHTML = `<div class="scroll-arrow"></div>`;
+
+	firstSection.after(hint);
+
+});
+
+
+
+
+
+
+const scrollHint = document.querySelector(".scroll-hint");
+
+window.addEventListener("scroll", () => {
+
+	if (window.scrollY > 120) {
+
+		scrollHint.style.opacity = "0";
+
+	} else {
+
+		scrollHint.style.opacity = "1";
+
+	}
+
+});
