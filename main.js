@@ -45,17 +45,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-/* ===== AUTO ACTIVE NAV UNIVERSAL ===== */
+/* ===== AUTO ACTIVE NAV FINAL ===== */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-	const currentPath = window.location.pathname.replace("index.html", "");
+	const currentPath = window.location.pathname
+		.replace("index.html", "")
+		.replace(".html", "")
+		.replace(/\/$/, "");
 
 	const navLinks = document.querySelectorAll(".nav-links a");
 
 	navLinks.forEach(link => {
 
-		let linkPath = new URL(link.href).pathname.replace("index.html", "");
+		const linkPath = new URL(link.href).pathname
+			.replace("index.html", "")
+			.replace(".html", "")
+			.replace(/\/$/, "");
 
 		if (currentPath === linkPath) {
 			link.classList.add("active");
