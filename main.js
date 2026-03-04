@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	setTimeout(() => {
 		modal.classList.add("active");
 		document.body.style.overflow = "hidden";
-	}, 10000);
+	}, 8000);
 
 	document.getElementById("lang-yes").addEventListener("click", function () {
 		sessionStorage.setItem("langPromptShown", "yes");
