@@ -211,29 +211,43 @@ ul {
 	padding-left: 20px;
 }
 
-/* ===== TELEGRAM FLOAT ===== */
+/* ===== TELEGRAM FLOAT SMART POSITION ===== */
 
 .telegram-float {
 	position: fixed;
-	right: 12px;
-	/* было 25px */
-	bottom: 20px;
+	bottom: 30px;
+
+	/* Привязка к контейнеру */
+	right: calc((100vw - 900px) / 2 - 70px);
+
 	width: 58px;
 	height: 58px;
 	border-radius: 50%;
 	background: white;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 	z-index: 1000;
+
 	animation: pulse 2.7s infinite;
 }
 
 .telegram-float img {
-	width: 36px;
-	height: 36px;
+	width: 32px;
+	height: 32px;
 }
+
+/* Если экран уже контейнера — возвращаем обычное положение */
+
+@media (max-width: 1100px) {
+	.telegram-float {
+		right: 15px;
+	}
+}
+
 
 .telegram-float:hover {
 	transform: scale(1.12);
