@@ -45,36 +45,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// ===== AUTO ACTIVE NAV (RU + UA PRODUCTION SAFE) =====
+/* ===== AUTO ACTIVE NAV (RU + UA SAFE) ===== */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-	const path = window.location.pathname;
-	const isUa = path.includes("/ua/");
-	const currentFile = path.split("/").pop(); // crm.html или пусто
+	const currentPath = window.location.pathname;
 
 	const navLinks = document.querySelectorAll(".nav-links a");
 
 	navLinks.forEach(link => {
 
-		const href = link.getAttribute("href");
+		const linkPath = new URL(link.href).pathname;
 
-		// UA главная
-		if (isUa && (path === "/ua/" || path === "/ua/index.html")) {
-			if (href === "/ua/") {
-				link.classList.add("active");
-			}
-		}
-
-		// RU главная
-		if (!isUa && (path === "/" || path === "/index.html")) {
-			if (href === "/") {
-				link.classList.add("active");
-			}
-		}
-
-		// Остальные страницы (crm, finance и т.д.)
-		if (href === currentFile) {
+		if (linkPath === currentPath) {
 			link.classList.add("active");
 		}
 
