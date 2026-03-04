@@ -69,9 +69,10 @@ body {
 	color: white;
 	line-height: 30px;
 	transition:
-		transform 0.3s ease,
-		font-weight 0.3s ease,
-		text-shadow 0.3s ease;
+		transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+		font-size 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+		opacity 0.25s ease,
+		text-shadow 0.35s ease;
 }
 
 .toggle-slider {
@@ -83,8 +84,14 @@ body {
 	border-radius: 50%;
 	background: white;
 	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
-	transition: transform 0.3s ease;
+	transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+
+.lang-toggle:active .toggle-slider {
+	transform: scale(0.95);
+}
+
 
 /* ===== RU ACTIVE ===== */
 
@@ -121,6 +128,10 @@ body {
 
 .lang-toggle.ua-active .toggle-slider {
 	transform: translateX(42px);
+}
+
+.lang-toggle:active .toggle-slider {
+	transform: scale(0.95);
 }
 
 /* UA активный */
