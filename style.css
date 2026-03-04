@@ -11,7 +11,7 @@ body {
 	max-width: 900px;
 	margin: auto;
 	padding: 40px 20px;
-	padding-top: 40px;
+	padding-top: 20px;
 }
 
 /* ===== НАВИГАЦИЯ ===== */
@@ -58,7 +58,7 @@ body {
 }
 
 .nav-links a:hover {
-	background: #0088cc;
+	background: #3db5f1;
 	color: white;
 	transform: translateY(-2px);
 }
