@@ -375,14 +375,15 @@ ul {
 	.contacts-row {
 
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: auto auto;
 		grid-template-areas:
 			"phone phone"
 			"tg viber";
 
+		justify-content: center;
 		justify-items: center;
-		gap: 25px;
-
+		gap: 20px 30px;
+		/* вертикаль горизонталь */
 	}
 
 	/* телефон сверху */
@@ -403,7 +404,7 @@ ul {
 		grid-area: viber;
 	}
 
-	/* чуть уменьшаем иконки */
+	/* немного уменьшаем иконки */
 
 	.contact-link img {
 		width: 46px;
@@ -415,7 +416,6 @@ ul {
 	}
 
 }
-
 
 /* ===== АДАПТИВ ===== */
 
