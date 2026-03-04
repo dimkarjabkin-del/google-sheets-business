@@ -109,41 +109,62 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
-/* ===== AUTO SCROLL HINT ===== */
+/* ===== SMART SCROLL HINT ===== */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-	const firstSection = document.querySelector(".section");
+	const sections = document.querySelectorAll(".section");
 
-	if (!firstSection) return;
+	if (!sections.length) return;
 
 	const hint = document.createElement("div");
 	hint.className = "scroll-hint";
-
 	hint.innerHTML = `<div class="scroll-arrow"></div>`;
 
-	firstSection.after(hint);
+	document.body.appendChild(hint);
 
-});
+	function updateHint() {
 
+		let lastVisible = null;
+		let hiddenExists = false;
 
+		sections.forEach(section => {
 
+			const rect = section.getBoundingClientRect();
 
+			if (rect.top < window.innerHeight * 0.9) {
 
+				lastVisible = section;
 
-const scrollHint = document.querySelector(".scroll-hint");
+			} else {
 
-window.addEventListener("scroll", () => {
+				hiddenExists = true;
 
-	if (window.scrollY > 120) {
+			}
 
-		scrollHint.style.opacity = "0";
+		});
 
-	} else {
+		if (!lastVisible) return;
 
-		scrollHint.style.opacity = "1";
+		if (!hiddenExists) {
+
+			hint.style.opacity = "0";
+			return;
+
+		}
+
+		const rect = lastVisible.getBoundingClientRect();
+
+		hint.style.opacity = "1";
+
+		hint.style.top =
+			window.scrollY + rect.bottom + 10 + "px";
 
 	}
+
+	window.addEventListener("scroll", updateHint);
+	window.addEventListener("resize", updateHint);
+
+	updateHint();
 
 });
