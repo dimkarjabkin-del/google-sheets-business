@@ -23,7 +23,7 @@ body {
 	z-index: 1000;
 
 	width: 100%;
-	background: #e9eef5;
+	background: #3f3f41;
 	border-bottom: 1px solid rgba(0,0,0,0.06);
 	box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
@@ -62,7 +62,7 @@ body {
 }
 
 .nav-links a:hover {
-	background: #0088cc;
+	background: #3a9dcf;
 	color: white;
 	transform: translateY(-2px);
 }
