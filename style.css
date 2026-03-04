@@ -21,54 +21,49 @@ body {
 	top: 0;
 	z-index: 1000;
 
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 12px;
-
-	max-width: 1100px;
-	/* шире контейнера */
-	margin: 0 auto 30px auto;
-
-	padding: 16px 30px;
-
-	background: #3b3b3b;
-	/* немного темнее контента */
-
-	border-radius: 16px;
-	box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+	width: 100%;
+	background: #3b3b3b;; /* чуть темнее контента */
+	border-bottom: 1px solid rgba(0,0,0,0.06);
+	box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
 
+/* Внутренний ограничитель ширины */
+.navbar-inner {
+	max-width: 900px;  /* совпадает с .container */
+	margin: 0 auto;
+	padding: 14px 20px;
+
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+/* Кнопки по центру */
 .nav-links {
 	display: flex;
 	gap: 12px;
-	flex-wrap: wrap;
+	margin: 0 auto; /* центрирует навигацию */
 }
 
 .nav-links a {
 	text-decoration: none;
 	padding: 8px 14px;
-	/* было 10px 18px */
 	background: white;
 	border-radius: 8px;
 	color: #333;
 	font-weight: 500;
 	font-size: 14px;
-	/* немного компактнее */
 	transition: all 0.25s ease;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Hover */
 .nav-links a:hover {
-	background: #66b2d8;
+	background: #0088cc;
 	color: white;
 	transform: translateY(-2px);
 }
 
-/* ===== ACTIVE LINK ===== */
-
+/* Active */
 .nav-links a.active {
 	background: #0088cc;
 	color: white;
@@ -77,11 +72,9 @@ body {
 	font-weight: 600;
 }
 
-/* Чтобы hover не ломал active */
-.nav-links a.active:hover {
-	background: #0088cc;
-	color: white;
-	transform: translateY(-3px);
+/* Переключатель языка чуть правее */
+.lang-toggle {
+	margin-left: 20px;
 }
 
 /* ===== IOS LANGUAGE TOGGLE ===== */
