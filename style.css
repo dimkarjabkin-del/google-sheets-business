@@ -580,11 +580,11 @@ ul {
 
 .scroll-arrow {
 
-	width: 20px;
-	height: 20px;
+	width: 28px;
+	height: 28px;
 
-	border-left: 3px solid #0088cc;
-	border-bottom: 3px solid #0088cc;
+	border-left: 3px solid #46ffa3;
+	border-bottom: 3px solid #46ffa3;
 
 	transform: rotate(-45deg);
 
