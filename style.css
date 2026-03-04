@@ -215,16 +215,17 @@ ul {
 
 .telegram-float {
 	position: fixed;
-	right: 25px;
-	bottom: 25px;
-	width: 65px;
-	height: 65px;
+	right: 12px;
+	/* было 25px */
+	bottom: 20px;
+	width: 58px;
+	height: 58px;
 	border-radius: 50%;
 	background: white;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 	z-index: 1000;
 	animation: pulse 2.7s infinite;
 }
